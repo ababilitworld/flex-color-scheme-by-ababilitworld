@@ -1,15 +1,18 @@
 <?php
-namespace AbabilItWorld\FlexDataManagementByAbabilitWorld\Generation\Factory;
+namespace Ababilitworld\FlexColorSchemeByAbabilitworld\Package\Factory\Factory;
 
-use AbabilItWorld\{
-    FlexDataManagementByAbabilitworld\Data\Factory\Generator\Interface\Generator\Generator as Tool,
-    FlexDataManagementByAbabilitWorld\Data\Factory\Generator\Library\Abagen\Tool\Text\Text as TextTool,
-    FlexDataManagementByAbabilitWorld\Data\Factory\Generator\Library\Abagen\Tool\Html\Html as HTMLTool,
-    FlexDataManagementByAbabilitWorld\Data\Factory\Generator\Library\Abagen\Tool\Username\Username as UsernameTool,
+use Ababilitworld\{
+    FlexTraitByAbabilitworld\Standard\Standard,
+    FlexColorSchemeByAbabilitworld\Package\Factory\Library\Default\Contract\ColorScheme as Tool,
+    FlexColorSchemeByAbabilitworld\Package\Factory\Library\Default\Tool\BoldVibrant\BoldVibrant as BoldVibrant,
+    FlexColorSchemeByAbabilitworld\Package\Factory\Library\Default\Tool\DarkGlam\DarkGlam as DarkGlam,
+    FlexColorSchemeByAbabilitworld\Package\Factory\Library\Default\Tool\ModernMinimalist\ModernMinimalist as ModernMinimalist,
+    FlexColorSchemeByAbabilitworld\Package\Factory\Library\Default\Tool\WormPastle\WormPastle as WormPastle,
 };
 
-class Factory 
+class Factory
 {
+    use Standard;
     private static array $tools = [];
 
     /**
@@ -40,10 +43,10 @@ class Factory
         // Default tools
         return match ($rule) 
         {
-            'bold_vibrant' => new TextTool(),
-            'dark_glam' => new HTMLTool(),
-            'modern_minimalist' => new UsernameTool(),
-            'worm_pastle' => new UsernameTool(),
+            'bold_vibrant' => new BoldVibrant(),
+            'dark_glam' => new DarkGlam(),
+            'modern_minimalist' => new ModernMinimalist(),
+            'worm_pastle' => new WormPastle(),
             default => throw new \InvalidArgumentException("Unsupported factory rule: $rule"),
         };
     }

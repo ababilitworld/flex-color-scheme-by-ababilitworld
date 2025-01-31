@@ -1,6 +1,6 @@
 <?php
 
-namespace Ababilitworld\FlexColorSchemeByAbabilitworld\Package\Abstract;
+namespace Ababilitworld\FlexColorSchemeByAbabilitworld\Package\Base;
 
 (defined('ABSPATH') && defined('WPINC')) || die();
 
