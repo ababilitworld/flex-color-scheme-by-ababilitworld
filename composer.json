@@ -1,7 +1,7 @@
 {
     "name": "ababilitworld/flex-color-scheme-by-ababilitworld",
     "description": "A package to manage color scheme by Ababil IT World.",
-    "keywords": ["color scheme", "wordpress"],
+    "keywords": ["color scheme", "php"],
     "type": "library",
     "license": "MIT",
     "license_uri": "https://opensource.org/licenses/MIT",
