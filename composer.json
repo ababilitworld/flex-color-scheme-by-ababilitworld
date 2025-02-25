@@ -24,7 +24,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ababilitworld\\FlexColorSchemeByAbabilitworld\\Package\\": "src/Package"
+            "Ababilitworld\\FlexColorSchemeByAbabilitworld\\Package\\": "src/Package/"
+        },
+        "files": [
+            "includes.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ababilitworld\\FlexColorSchemeByAbabilitworld\\Package\\Test\\": "Test/"
         }
     },
     "repositories": [
